@@ -1,184 +1,159 @@
-# GDG on Campus AITR – Web Developer 
+# GDG on Campus AITR – Portal Review
 
-This repository contains my analysis on finding bugs and giving possible suggestions for this website
-
----
-
-## Section A – GDG Portal Review & Suggestions
+## Section A: GDG Portal Review & Suggestions
 
 ### Website Reviewed
 
-GDG on Campus AITR Recruitment Portal  
+GDG on Campus AITR Recruitment Portal:  
 https://gdgocaitr.vercel.app/
 
-### Testing
+I reviewed the portal on both desktop and mobile views and checked its main
+navigation, event-related features, recruitment actions and responsive layout.
 
-I checked the website on both desktop and mobile views.
+---
 
-I mainly tested:
+# 1. Bugs / Issues Observed
+
+### 1.1 Occasional Scroll / Navigation Issue in "View Task"
+
+While testing the event page, I noticed an occasional navigation/scroll issue
+when clicking the **"View Task"** button.
+
+Sometimes, instead of directly showing the intended task content, the page
+briefly moves or displays a lower section before reaching the expected content.
+
+This issue does not happen every time, so it was not consistently
+reproducible during testing.
+
+**Suggested fix:**  
+The navigation or scroll behavior could be made more consistent so that
+clicking "View Task" takes the user directly to the intended content without
+the unexpected intermediate scroll.
+
+---
+
+# 2. Analysis / Testing
+
+I tested the website on both desktop and mobile views.
+
+The following areas were checked:
 
 - Navigation links
 - Events page
 - Event cards
 - Search
 - Filters
-- Apply Now
-- View Task
-- Mobile menu
+- "Apply Now" button
+- "View Task" button
+- Mobile navigation menu
 - Text and button alignment
 - Mobile responsiveness
 - Horizontal scrolling / content overflow
 
----
+### Desktop
 
-## My Observations
+The main navigation, search, filters, event cards and recruitment actions
+worked as expected during testing.
 
-### 1. General Functionality
+### Mobile
 
-The main parts of the website that I tested were working properly.
+The recruitment page was tested using a mobile-sized viewport.
 
-I was able to use the navigation, search and filter options and open the event and recruitment related sections.
+The header, hamburger menu, role buttons, text and recruitment content were
+properly adjusted. I did not observe any major horizontal overflow or content
+being cut off.
 
-I did not find any major or critical functional bug during my testing.
+### Overall Testing Result
 
-### 2. Small Navigation Issue
+No major broken links, critical functional bugs or major mobile layout issues
+were observed during manual testing.
 
-While checking the event page, I noticed that clicking **View Task** sometimes caused the page to briefly move towards a lower section before showing the intended content.
-
-This did not happen every time, so I could not reproduce it consistently.
-
-**Suggestion:**  
-The transition could be made more consistent so that the user directly reaches the intended content.
-
-### 3. Mobile View
-
-I also tested the recruitment page using a mobile-sized viewport.
-
-The main elements looked properly adjusted:
-
-- Header
-- Hamburger menu
-- Role buttons
-- Text
-- Recruitment content
-- Buttons
-
-I did not notice any major horizontal overflow or content getting cut off during the test.
+The only issue noticed was the occasional scroll/navigation behavior with the
+"View Task" button.
 
 ---
 
-# Suggestions for Improvement
+# 3. Suggestions for Improvement
 
-These are some features that I think could make the recruitment portal more useful for students.
+### 3.1 AI-Powered Multilingual Student Assistant
 
-### 1. More Details About Each Role
+An AI assistant could be added to help students navigate the GDG portal and
+understand the community better.
 
-Before applying, students could see basic information about each role, such as:
+Students could ask questions about:
+
+- GDG and its activities
+- Recruitment roles
+- Events and workshops
+- Registration
+- Certificates
+- Learning opportunities
+- How GDG can help them build projects and improve their skills
+
+The assistant could support **English, Hindi and Hinglish**, making the portal
+more accessible to students who are more comfortable with Indian languages.
+
+A useful feature could also be a **"Which Role Is Right For Me?"** option.
+The assistant could ask a few questions about a student's interests,
+experience and preferred activities and then suggest suitable GDG roles based
+on the information available on the portal.
+
+The assistant should use the actual information available on the website
+rather than generating unrelated information.
+
+---
+
+### 3.2 More Detailed Role Information
+
+Each recruitment role could include more information about:
 
 - What the role involves
-- Main responsibilities
-- Required skills
-- Whether beginners can apply
-- Expected time commitment
-- Selection process
+- What students will work on
+- What they can learn
+- Useful skills for the role
+- Examples of possible projects or activities
 
-This would make it easier for students to choose the right role.
-
-### 2. Recruitment FAQ
-
-A small FAQ section could answer common questions about the recruitment process.
-
-For example:
-
-- Can a student apply for more than one role?
-- What are the eligibility requirements?
-- What happens after applying?
-- How will shortlisted students be contacted?
-- When will the results be announced?
-
-### 3. Application Status
-
-After submitting an application, students could have a way to check its status.
-
-For example:
-
-`Submitted → Under Review → Shortlisted → Selected`
-
-This would make the process clearer and reduce uncertainty for applicants.
-
-### 4. GDG Community / Project Showcase
-
-A section showing previous GDG AITR activities could be useful.
-
-It could include:
-
-- Previous hackathons
-- Workshops
-- Projects
-- Events
-- Member achievements
-
-This would also give new applicants a better idea of what they can experience after joining GDG.
-
-### 5. Better Event Organization
-
-Events could be separated more clearly into:
-
-- Upcoming
-- Ongoing
-- Completed
-
-A small status label on each event could make the events page easier to understand.
-
-### 6. Accessibility
-
-A few accessibility improvements could make the website easier to use for everyone.
-
-Some things that could be considered are:
-
-- Keyboard-friendly navigation
-- Visible focus states
-- Good color contrast
-- Proper labels for buttons and form fields
-- Keeping text readable on smaller screens
+This would help students choose a role based on their interests instead of
+only the role name.
 
 ---
 
-## Overall Feedback
+### 3.3 Recruitment Process Timeline
 
-I found the portal easy to navigate during my testing and the main features I checked were working.
+A simple visual timeline could make the recruitment process easier to
+understand.
 
-I did not find any major functional issue, so instead of adding artificial bugs, I focused on smaller UX improvements that could make the recruitment and event experience better for students.
+For example:
 
-The biggest improvements I would suggest are clearer role information, an FAQ section, application status tracking and a section showing GDG's previous projects and activities.
+**Apply → Screening/Task → Interview → Shortlist → Final Selection**
+
+This would help applicants know what to expect after submitting their
+application.
 
 ---
 
-## Section B – Project Showcase & Feedback Board
+### 3.4 Member Success Stories / Experiences
 
-This section will contain my implementation for **Task 2: Project Showcase & Feedback Board**.
+Along with the existing community and member content, short experiences from
+GDG members could show how joining GDG helped them learn, build projects,
+participate in events, or improve their skills.
 
-### Planned Features
+This could give new applicants a more realistic idea of what they can expect
+from the community.
 
-- Add a project
-- Display projects as cards
-- Project title and description
-- Tech stack / tags
-- Search projects
-- Filter projects
-- Upvote projects
-- Comment on projects
-- Responsive design
-- Prevent repeated upvotes from the same user
+---
 
-### Tech Stack
+# 4. Overall Feedback
 
-To be added after implementation.
+The portal was easy to navigate during my testing, and most of the features
+I checked worked as expected.
 
-### Live Demo
+I did not find major functional or mobile responsiveness issues. The main
+issue I noticed was the occasional scroll behavior with the "View Task"
+button.
 
-To be added after deployment.
-
-### GitHub Repository
-
-This repository contains the complete implementation and submission.
+The main opportunity for improvement is to make the recruitment experience
+more informative and interactive. A multilingual AI assistant, clearer role
+information, a recruitment timeline and real member experiences could help
+students better understand GDG and make more informed decisions about
+applying.
