@@ -7,6 +7,7 @@ import Activities from './components/Activities.jsx';
 import HelpSupport from './components/HelpSupport.jsx';
 import Footer from './components/Footer.jsx';
 import AddProject from './components/AddProject.jsx';
+import { SEED_PROJECTS } from './data/seedProjects.js';
 
 export default function App() {
   // Theme state with localStorage persistence and system preference fallback
